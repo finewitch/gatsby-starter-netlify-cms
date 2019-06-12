@@ -1,8 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import './all.sass'
+// import Navbar from '../components/Navbar'
+import './styles.scss'
 import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
@@ -37,6 +37,18 @@ const TemplateWrapper = ({ children }) => {
           href="/img/safari-pinned-tab.svg"
           color="#ff4400"
         />
+
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Martel:300&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap" rel="stylesheet"></link>
+
+        <link href="https://fonts.googleapis.com/css?family=Biryani:400,800&display=swap" rel="stylesheet"></link>
+
+        <link href="https://fonts.googleapis.com/css?family=Exo:500,700,900&display=swap" rel="stylesheet"></link>
+
+        
+
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
@@ -44,9 +56,9 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <Navbar />
+      {/* <Navbar /> */}
       <div>{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

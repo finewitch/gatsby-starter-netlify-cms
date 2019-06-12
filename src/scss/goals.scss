@@ -1,0 +1,52 @@
+.goals{
+    background-image: linear-gradient(179.62deg, #00EB99 7.84%, #053728 99.38%);
+    min-height: 900px;
+    
+    .parallax-title{
+        font-size:165px;
+        font-family: 'Josefin Sans', sans-serif;
+        position: absolute;
+        font-weight:bold;
+        white-space: nowrap;
+        left:-20px;
+        color: $bg-landing;
+        opacity:.2;
+        top:-70px;
+    }
+    .goal-title{
+        font-size:1.1em;
+    }
+    .column-top{
+        padding-top:190px;
+        margin-bottom:190px;
+    }
+    .goal-column{
+        max-width:390px;
+    }
+    .line-link{
+        position: relative;
+        width: 186px;
+        margin-left:0px;
+        transition: all 0.5s;
+        &:after{
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            content:'';
+            position: absolute;
+            width:500px;
+            border-top:1px solid white;
+            top:50%;
+            margin-left:.85em;
+            left: 100%;
+        }
+        &:hover{
+            cursor: pointer;
+            &:after{
+                left:92%;
+            }
+        }
+    }
+
+}

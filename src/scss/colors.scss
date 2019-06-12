@@ -1,0 +1,34 @@
+//FONT COLORS
+$white: #ffffff;
+$main-grey: #1A1A1A;
+$dark-grey: #282828;
+$light-grey:#E8E8E8;
+$deep-blue: #1D26F2;
+$light-blue: #4FFFEA;
+$green0: #416767;
+
+//BACKGROUND COLORS
+$bg-landing: #003159;
+$bg-landing-goals : #421238;
+
+//CANVAS - UTILS
+$arc-color1: #0865F0;
+$arc-color2: #986538;
+
+.color-grey{
+    color: $light-grey;
+}
+.color-blue{
+    color: $light-blue;
+}
+.color-white{
+    color: white;
+}
+
+:export {
+  bgLanding: $bg-landing;
+  bgLandingGoals: $bg-landing-goals;
+
+  arcColor1 : $arc-color1;
+  arcColor2 : $arc-color2;
+}

@@ -1,0 +1,131 @@
+html,body{
+    height:100%;
+    margin:0;
+    padding:0;
+}
+body{
+    // border: 10px solid rgb(128, 0, 32);
+    font-size:20px;
+    font-family: 'Martel', serif;
+    margin:0;
+    overflow-x :hidden;
+}
+.body-overflow{
+    overflow: hidden;
+}
+.canvasContainer{
+    position: absolute;
+    right:13%;
+    top:10%;
+    transition: right 1s ease;
+    -webkit-transition: right 1s ease;
+    -moz-transition: right 1s ease;
+    -ms-transition: right 1s ease;
+    -o-transition: right 1s ease;
+    video{
+        border-radius:50%;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+        -ms-border-radius:50%;
+        -o-border-radius:50%;
+}
+}
+canvas{
+    position: absolute;
+    right:23%;
+    top:10%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    transition: right 1s ease;
+    -webkit-transition: right 1s ease;
+    -moz-transition: right 1s ease;
+    -ms-transition: right 1s ease;
+    -o-transition: right 1s ease;
+}
+
+.move-right-edge{
+    right: - 350px;
+    transition: right 1s ease;
+    -webkit-transition: right 1s ease;
+    -moz-transition: right 1s ease;
+    -ms-transition: right 1s ease;
+    -o-transition: right 1s ease;
+}
+//fonts
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.h2-bold{
+    font-size: 50px;
+    font-weight: 600;
+}
+.centered{
+    text-align: center;
+
+}
+
+.columns{
+    padding: 0 115px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    .main{
+        flex:2;
+        // max-width:785px;
+    }
+    .side{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width:390px;
+        h3{
+            max-width:305px;
+            margin:0;
+        }
+    }
+    &__row{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        min-height:230px;
+        span{
+            // max-width: 390px;
+        }
+        h2{
+            margin:0;
+            font-size: 1.4em;
+            font-weight:400;
+            max-width: 785px;
+        }
+        &-title{
+            font-family: 'Josefin Sans', sans-serif;
+            text-transform:uppercase;
+            font-size: 1.05em;
+            font-weight:400;
+            margin-bottom:40px;
+            letter-spacing: 0.04em;
+            // color: $light-grey;
+        }
+        &-side{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size:0.9em;
+            font-weight: 300;
+            line-height: 129.14%;
+            letter-spacing: 0.1em;
+
+        }
+        &-link{
+            // color: $light-grey;
+            font-size: .85em;
+            letter-spacing: 0.1em;
+            margin-top:30px;
+            // margin-top: auto;
+            
+        }
+    }
+}
