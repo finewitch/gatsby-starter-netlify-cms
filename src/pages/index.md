@@ -3,10 +3,17 @@ templateKey: index-page
 title: CSPACE
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
+<<<<<<< HEAD
 subheading: Great coffee with a conscience
 mainpitch: 
   title: niedziala
   description: Why Kaldi????fic  
+=======
+subheading: Support sustainable farming while enjoying a cup
+mainpitch:
+  title: Why Kaldi
+  description: ficus ficus
+>>>>>>> d6a5ca0c3fc291e53656ea892ebdccef7db61e20
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -64,3 +71,4 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
