@@ -1,5 +1,6 @@
 import imgSource from "../img/landing/moon4.jpg";
 import gifSource from "../img/landing/people.mp4";
+import landingVid from '../img/landing/2.mp4';
 import colors from "../scss/colors.scss";
 
 // import p5Gif from './p5GIF.js';
@@ -16,6 +17,7 @@ export default function sketch (p) {
     mainCanvas,
     gifX,
     gifY,
+    vid1,
     scrolled;
 
     const cHeight = 700;
@@ -27,7 +29,12 @@ export default function sketch (p) {
 
     p.preload = function() {
         img1 = p.loadImage(imgSource);
-        // gif1 = p.createImg(gifSource);
+        vid1 = p.createVideo(landingVid);
+
+        vid1.elt.muted = true
+        vid1.autoplay();
+        vid1.loop();
+
         gif1 = p.createVideo(gifSource);
         gif1.elt.muted = true
         gif1.autoplay();
@@ -63,7 +70,7 @@ export default function sketch (p) {
     p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
         
         // console.log(props, '<----PROPS')
-        console.log(props.isSecondSection, '<----this')
+        // console.log(props.isSecondSection, '<----this')
         if(props.isSecondSection){
             scrolled = props.isSecondSection;
             bg  = colors.bgLandingGoals;
@@ -96,10 +103,12 @@ export default function sketch (p) {
     p.draw = function () {
         // p.background(250,250,20);
        
-        xAxis +=0.2;
-        // xAxis=0;
-        p.image(img1, xAxis, 0);
+        // xAxis +=0.2;
+        xAxis=0;
+        // p.image(img1, xAxis, 0);
         placeImage(scrolled);
+        p.clear();
+        vid1.position(-670,10);
         
         // gif1.parent("yolo");
         makeBgArc(bg);
@@ -121,7 +130,7 @@ export default function sketch (p) {
 
         canvas.noFill();
         canvas.stroke(arcStroke);
-        canvas.strokeWeight(2);
+        canvas.strokeWeight(12.1);
 
         
         ease = ease + 5.2;
@@ -129,7 +138,12 @@ export default function sketch (p) {
         
         // if(diff <= 361){
             
-            canvas.arc(p.width /2,    p.height/2,     (cHeight - 80),    (cWidth - 80),     start, (start * diff),     canvas.OPEN);
+            canvas.arc(p.width /2,    p.height/2,     (cHeight - 30),    (cWidth - 30),     start, (start * diff),     canvas.OPEN);
+            canvas.stroke(arcStroke);
+            canvas.strokeWeight(1.1);
+
+            // console.log(start * diff)
+            canvas.arc(p.width /2,    p.height/2,     (cHeight - 150),    (cWidth - 150),     start, (start * diff),     canvas.OPEN);
             
         // }else{
         //     return

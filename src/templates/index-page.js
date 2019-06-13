@@ -49,66 +49,96 @@ export class IndexPageTemplate extends React.Component {
       var bodyTag = document.querySelector('body');
       bodyTag.classList.add('body-overflow');
 
-      var landingPage = document.querySelector('.landing');
-      console.log('1', landingPage)
-      var landingHeader1 = landingPage.querySelector('.question-parallax');
-      var scrollInfo = document.querySelector('.landing__header-scroll');
+      this.getDomEls(bodyTag);
 
-      var landingHeader2 = document.querySelector('.landing__header-goals-title');
-      var landingHeader2A = document.querySelector('.landing__header-goals-title2');
-
-      var desc1 = document.querySelector('.landing__header-goals-desc');
-      var landing2 = document.querySelector('.sc');
-      var landingHeaderSide = document.querySelector('.landing__header-wrapper-side');
-
-      // setTimeout(()=>{
-       
-        console.log(this.canvas, '<---canvas')
-
-      // },1000)
   
       window.addEventListener('wheel', function(e){
 
+        //scroll direction
         let deltaY = e.deltaY;
 
+        //true === add class
+        //false == remove class
+
         if(deltaY > 0){
+          
 
-          landingPage.classList.add('bg-red');
-          landingHeader1.classList.add('out-of-screen');
-          landingHeader2.classList.add('in-screen');
-          landingHeader2A.classList.add('in-screen2');
+          var body = document.querySelector('body');
 
-          scrollInfo.classList.remove('move-in-from-bottom');
-          this.canvas.classList.add('move-right-edge');
-          setTimeout(()=>{
+           if(body.classList.contains('goals-here')){
+             body.classList.remove('body-overflow')
+           }
+          body.classList.add('goals-here');
 
-            desc1.classList.add('fade-in');
-            landingHeaderSide.classList.add('in-screen');
-            landing2.classList.add('in-screen3');
-          }, 500)
-          // console.log('going down with', this.canvas)
           this.setState({
             scrolled : true,
           })
 
+          changeBgTo(this.landingWrapper,'bg-goals', true)
+
+          hideHeaders([
+
+            [this.landingHeader_1, 'landingHeader_1-hidden'], 
+
+          ]);
+
+          showHeaders([
+
+            [this.landingGoalHeader_1, 'landingGoalHeader_1-visible', true], 
+            [this.landingGoalHeader_2, 'landingGoalHeader_2-visible', true],
+            [this.landingGoalDesc_1, 'landingGoalDesc_1-visible', true],
+            [this.landingGoalDesc_2, 'landingGoalDesc_2-visible', true],
+
+          ]);
+
+          moveCanvas(this, true);
+
+          // this.landingScrollText.classList.remove('move-in-from-bottom');
+
+          setTimeout(()=>{
+
+            showHeaders([
+
+              // [this.landingGoalDesc_1, 'fade-in'], 
+              // [this.landingGoalDesc_1_side, 'landingGoalHeader_1-visible'], 
+              // [this.landingGoalDesc_2, 'in-screen3']
+  
+            ]);
+
+          }, 500)
+        
+
         }else{
           
-          landingPage.classList.remove('bg-red');
-          landingHeader1.classList.remove('out-of-screen');
-          landingHeader2.classList.remove('in-screen');
-          landingHeader2A.classList.remove('in-screen2');
-
-          scrollInfo.classList.add('move-in-from-bottom');
-          this.canvas.classList.remove('move-right-edge');
-
-          desc1.classList.remove('fade-in');
-          landingHeaderSide.classList.remove('in-screen');
-
-          landing2.classList.remove('in-screen3');
-
           this.setState({
             scrolled : false,
           })
+
+          changeBgTo(this.landingWrapper, 'bg-goals', false);
+
+          showHeaders([
+
+            [this.landingHeader_1, 'landingHeader_1-hidden', false], 
+            [this.landingGoalHeader_1, 'landingGoalHeader_1-visible', false],
+            [this.landingGoalHeader_2, 'landingGoalHeader_2-visible', false],
+            [this.landingGoalDesc_1, 'landingGoalDesc_1-visible', false],
+            [this.landingGoalDesc_2, 'landingGoalDesc_2-visible', false]
+           
+  
+          ]);
+
+
+
+
+          // this.landingScrollText.classList.add('move-in-from-bottom');
+
+          moveCanvas(this,false)
+
+          // this.landingGoalDesc_1.classList.remove('fade-in');
+          // this.landingGoalDesc_1_side.classList.remove('in-screen');
+
+          // this.landingGoalDesc_2.classList.remove('in-screen3');
+
 
 
         }
@@ -130,7 +160,76 @@ export class IndexPageTemplate extends React.Component {
         // })
   
       }.bind(this))
+
+      function showHeaders(els){
+ 
+         els.forEach( (domEl, index) =>{
+
+          if(!domEl[2]){
+
+            domEl[0].classList.remove(domEl[1]);
+
+          }else{
+
+            domEl[0].classList.add(domEl[1]);
+
+          }
+            
+          } )
+
+      }
+
+      function hideHeaders(els, flag){
+
+        els.forEach( (domEl, index) =>{
+
+            domEl[0].classList.add(domEl[1]);
+           
+         } )
+
+
+      }
+
+      function moveCanvas(context, flag){
+        if(flag){
+
+          context.canvas.classList.add('move-right-edge');
+
+        }else{
+
+          context.canvas.classList.remove('move-right-edge');
+
+        }
+
+      }
+
+      function changeBgTo(wrapper,color, flag){
+        if (flag){
+          wrapper.classList.add(color)
+        }else{
+          wrapper.classList.remove(color)
+
+        }
+      }
   
+    }
+    this.getDomEls = function(body){
+
+
+      this.landingWrapper = body.querySelector('.landingWrapper');
+      //HEADERS
+      this.landingHeader_1 = body.querySelector('.landingHeader_1');
+      this.landingGoalHeader_1 = document.querySelector('.landingGoalHeader_1');
+      this.landingGoalHeader_2 = document.querySelector('.landingGoalHeader_2');
+      
+      this.landingScrollText = document.querySelector('.landingScrollText');
+      this.landingGoalDesc_1 = document.querySelector('.landingGoalDesc_1');
+      this.landingGoalDesc_2 = document.querySelector('.landingGoalDesc_2');
+      this.landingGoalDesc_1_side = document.querySelector('.landingGoalDesc_1_side');
+
+
+      
+      
     }
   }
 
@@ -152,11 +251,11 @@ export class IndexPageTemplate extends React.Component {
   <div>
     <Menu logoVisibility = {this.state.menuVisible}/>
     {/* <div className='menu-margin-gap'> */}
-      <div className="canvasContainer" id="yolo">
+      <div className="canvasContainer">
         <P5Wrapper sketch={Sketch} isSecondSection = {this.state.scrolled}/>
       </div>
       <Landing headings={[this.props.title, this.props.subheading, this.props.mainpitch.description]}/>
-      <Goals/>
+      {/* <Goals/> */}
       <Publications/>
     {/* </div> */}
     
