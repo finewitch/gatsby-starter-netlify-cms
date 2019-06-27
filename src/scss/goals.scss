@@ -1,52 +1,71 @@
+.section-2{
+    height:100vh;
+    transition: background .5s ease-in-out;
+    // border: 10px solid red;
+}
 .goals{
-    background-image: linear-gradient(179.62deg, #00EB99 7.84%, #053728 99.38%);
-    min-height: 900px;
-    
-    .parallax-title{
-        font-size:165px;
-        font-family: 'Josefin Sans', sans-serif;
-        position: absolute;
-        font-weight:bold;
-        white-space: nowrap;
-        left:-20px;
-        color: $bg-landing;
-        opacity:.2;
-        top:-70px;
-    }
-    .goal-title{
-        font-size:1.1em;
-    }
-    .column-top{
-        padding-top:190px;
-        margin-bottom:190px;
-    }
-    .goal-column{
-        max-width:390px;
-    }
-    .line-link{
-        position: relative;
-        width: 186px;
-        margin-left:0px;
-        transition: all 0.5s;
-        &:after{
-            -webkit-transition: all 0.5s;
-            -moz-transition: all 0.5s;
-            -ms-transition: all 0.5s;
-            -o-transition: all 0.5s;
-            content:'';
-            position: absolute;
-            width:500px;
-            border-top:1px solid white;
-            top:50%;
-            margin-left:.85em;
-            left: 100%;
+    color:rgb(245, 245, 245);
+    &__top{
+        // border: 2px dotted green;
+        display: flex;
+        // align-content: center;
+        height:25%;
+        h2{
+            flex-basis: 50%;
+            display: flex;
+            align-items: center;
+            font-weight:lighter;
         }
-        &:hover{
-            cursor: pointer;
-            &:after{
-                left:92%;
+        h2{
+            border-bottom:1px solid grey;
+            padding-bottom:20px;
+        }
+        div{
+            font-family: 'Josefin Sans';
+            // flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size:1.7rem;
+            svg{
+                width: 90px;
+                height: 50px;
+            }
+        }
+        &-side{
+            flex-basis: 50%;
+            display: flex;
+            align-items: center;
+            font-weight:lighter;
+            a{
+                font-size:2.5rem;
             }
         }
     }
-
+    &__bottom{
+    //     .vs{
+    //         // padding: 40px;
+    // // box-shadow: 0px 0px 18px -2px rgb(232, 232, 232);
+    //     width: 500px;
+    //     }
+        // border: 1px solid red;
+        display: flex;
+        margin-top:100px;
+        height:75%;
+        &-column{
+            // border: 1px solid red;
+        }
+        div{
+            flex-basis: 50%;
+        }
+        &-column-title{
+            font-family: 'Josefin Sans';
+            // margin-bottom:20px;
+            font-size:1.3rem;
+            // padding-left: 40px;
+        }
+        &-column-content{
+            max-width:500px;
+            font-size:1.3rem;
+        }
+    }
 }

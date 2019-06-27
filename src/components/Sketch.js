@@ -68,6 +68,7 @@ export default function sketch (p) {
     };
     
     p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
+        console.log(props)
         
         // console.log(props, '<----PROPS')
         // console.log(props.isSecondSection, '<----this')

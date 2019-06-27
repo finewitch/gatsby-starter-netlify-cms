@@ -39,16 +39,8 @@ const TemplateWrapper = ({ children }) => {
         />
 
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Martel:300&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700&display=swap" rel="stylesheet"></link>
-        <link href="https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap" rel="stylesheet"></link>
-        <link href="https://fonts.googleapis.com/css?family=Scope+One&display=swap" rel="stylesheet"></link>
-
-        <link href="https://fonts.googleapis.com/css?family=Biryani:400,800&display=swap" rel="stylesheet"></link>
-
-        <link href="https://fonts.googleapis.com/css?family=Exo:500,700,900&display=swap" rel="stylesheet"></link>
-
-        
+        <link href="https://fonts.googleapis.com/css?family=Martel:400,700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700&display=swap" rel="stylesheet"/>
 
         <meta name="theme-color" content="#fff" />
 
@@ -58,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
       {/* <Navbar /> */}
-      <div>{children}</div>
+      {children}
       {/* <Footer /> */}
     </div>
   )

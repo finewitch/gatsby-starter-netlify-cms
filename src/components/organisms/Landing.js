@@ -12,89 +12,47 @@ import PropTypes from 'prop-types'
 
       return(
 
-        <div className="margin-top-0 landing landingWrapper">
-        <div className="landing__header menu-margin-gap">
-
-        <h1 className='question-parallax landingHeader_1'>
-
-			
-          <svg class="filled-heading1">
-
-            <text y="70" fill="#fefefc">.WHAT’S</text>
-            <clipPath id="text" class="filled-heading">
-
-                <text y="210">CLINICAL</text>
-                <text y="350">SPACE?</text>
-            </clipPath>
-                
-            <g id="background" clip-path="url(#text)">
-			
-              <path d="M570,370H-26.7V0L570,0V370z"/>
-                    
-              <path d="M442.5,381.8L442.5,381.8c-114.2,0-206.7-92.5-206.7-206.7v0c0-114.1,92.5-206.7,206.7-206.7h0c114.1,0,206.7,92.5,206.7,206.7v0C649.2,289.2,556.7,381.8,442.5,381.8z"/>
-                    
-              <path id="sec" d="M442.5,381.8L442.5,381.8c-114.2,0-206.7-92.5-206.7-206.7v0c0-114.1,92.5-206.7,206.7-206.7h0c114.1,0,206.7,92.5,206.7,206.7v0C649.2,289.2,556.7,381.8,442.5,381.8z"/>
-                    
-              <path id="th" d="M113.3,392.1L113.3,392.1C50.7,392.1,0,341.4,0,278.8v0C0,216.2-34,165.3,72.7,140c0,0,70.7-6.7,153.3,28.7C332,214,335.4,273,335.4,273c-5.7,53.3-82.4,68.7-114.7,85C199.1,368.9,139.4,392.1,113.3,392.1z"/>
-                
-            </g>
-
-          </svg>
-          
-        </h1>
-          
-          <div className="landing__header-wrapper">
-            <div>
-              <span className="landing__header-goals-title landingGoalHeader_1"> .WE ARE</span>
-              <h2 className="landing__header-goals-desc landingGoalDesc_1">The CSPACE lab (Science of Personality, Addiction, and Religion, Throughout Adulthood) at Bowling Green State University is comprised of myself, my current graduate students, and a number of undergraduate students.</h2>
-            </div>
-            <div className="landing__header-wrapper-side landingGoalDesc_1_side">
-              <span>Paid Media, Search Marketing, Social Media, Data & Analytics</span>
-              <a>More about us ?</a>
-            </div>
-          </div>
-
-
-          <div className="landing__header-wrapper landingGoalDesc_2">
-
-            <span className="landing__header-goals-title2 landingGoalHeader_2"> FOCUSING ON</span>
-              <div className="columns__row goal-column">
-                  <span className="columns__row-title color-blue goal-title">INTERNET ADDICTION</span>
-                  <span>Cooper Perkins brings exceptional engineering skills and experience to solve our partners' most challenging technical problems.</span>
-              </div>
+        <div className="section-1 landing margin-top">
+          <div className="landing__wrapper">
+            <div className="landing__wrapper-title">
               
-              <div className="columns__row goal-column">
-                  <span className="columns__row-title color-blue goal-title">CLINICAL PSYCHOLOGY</span>
-                  <span>To make this information usable for a runner, we needed to develop a communication system that would wirelessly send real-time data to runners via their smartphone. This feedback mechanism needed to be user-friendly, allowing runners to easily interpret information.</span>
-              </div>
+              <h1><span className="landing__wrapper-title-span"></span>What<span className="landing__wrapper-title-span">’</span>s <br/>Clinical <br/>
+              Space<span className="landing__wrapper-title-span">?</span></h1>
+        
+            </div>
 
-              <div className="columns__row goal-column">
-                  <span className="columns__row-title color-blue goal-title">INTERNET PORNOGRAPHY USE</span>
-                  <span>Cooper Perkins brings exceptional engineering skills and experience to solve our partners' most challenging technical problems.</span>
-              </div>
+            <div className="landing__wrapper-scroll">
 
-          </div>
+              <svg width="49" height="49" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" id="scroll-svg">
+                  <circle cx="9.00078" cy="9.00053" r="8.99849" transform="rotate(-0.0145765 9.00078 9.00053)" fill="#242424"/>
+                  <g clipPath="url(#clip0)">
+                  <path d="M6.42875 6.49268C6.35507 6.24318 6.28433 5.99326 6.23116 5.7538C5.8816 5.54699 5.64382 5.17064 5.64382 4.73568C5.64382 4.08136 6.1759 3.54969 6.82981 3.54969C7.48371 3.54969 8.01579 4.08178 8.01579 4.73568C8.01579 4.82569 8.00365 4.91234 7.98481 4.99649C8.09826 5.24641 8.18994 5.52773 8.27032 5.81366C8.49638 5.51225 8.63537 5.14175 8.63537 4.73568C8.63537 3.73808 7.82741 2.93011 6.82981 2.93011C5.8322 2.93011 5.02466 3.73808 5.02466 4.73568C5.02466 5.59472 5.6254 6.31016 6.42875 6.49268Z" fill="#C6C6C6"/>
+                  <path d="M5.18168 10.7674C5.62669 10.2864 6.12612 10.4747 6.79468 10.5765C7.36904 10.6648 7.93461 10.5036 7.89694 10.1934C7.83749 9.69147 7.75376 9.46709 7.56329 8.81695C7.41132 8.29994 7.12288 7.36806 6.8604 6.47721C6.50875 5.28536 6.40702 4.73192 6.87505 4.59377C7.37951 4.44683 7.66878 5.16353 7.93085 6.15737C8.22933 7.28852 8.38632 7.78795 8.47423 7.76157C8.62913 7.7172 8.4173 7.23326 8.82254 7.11395C9.32908 6.96659 9.42704 7.36262 9.56896 7.32284C9.71087 7.28014 9.66273 6.87909 10.0667 6.76104C10.4728 6.64382 10.6767 7.14367 10.8441 7.09385C11.0099 7.04487 11.0061 6.86444 11.2565 6.79286C11.5072 6.71834 12.4508 7.14074 12.9909 8.98566C13.6686 11.3053 12.905 11.7365 13.1366 12.5219L10.1111 13.6723C9.86619 13.0832 9.10762 13.0397 8.43656 12.6642C7.76046 12.2837 7.30122 11.5423 5.53919 11.5783C4.8765 11.5916 4.90789 11.0633 5.18168 10.7674Z" fill="white"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0">
+                  <rect width="10.7421" height="10.7421" fill="white" transform="translate(3.76758 2.93011)"/>
+                  </clipPath>
+                  </defs>
+              </svg>
+              <span>scroll to get to know us</span>
 
-
-          <span className='landing__header-scroll landingScrollText'>scroll to get to know us</span>
+            </div>
+            </div>
 
         </div> 
-
-          
-
-      </div>
 
       )
     }
 
     componentDidMount(){
-      var q = document.querySelector('.question-parallax');
-      var scroll = document.querySelector('.landing__header-scroll');
-      setTimeout(()=>{
-        q.classList.add('move-in-from-left');
-        scroll.classList.add('move-in-from-bottom');
+      // var q = document.querySelector('.question-parallax');
+      // var scroll = document.querySelector('.landing-scroll');
+      // setTimeout(()=>{
+      //   q.classList.add('move-in-from-left');
+      //   scroll.classList.add('move-in-from-bottom');
 
-      },500)
+      // },500)
 
 
     }
