@@ -7,7 +7,7 @@ export default class Goals extends React.Component {
             <div className="section-2 goals">
                 <div className="section__wrapper">
 
-                    <h3 className="color-grey">about</h3>
+                    <h3 className="color-green-header">about</h3>
 
                     <div className="goals__top">
 
@@ -16,7 +16,7 @@ export default class Goals extends React.Component {
                         </h2>
 
                         <div className="goals__top-side">
-                            <a >More on <span data-hover="TEAM">TEAM?</span></a>
+                            <a >More on <span data-hover="TEAM" className="color-green-header">TEAM?</span></a>
                             <LinkIco/>
                         </div>
 

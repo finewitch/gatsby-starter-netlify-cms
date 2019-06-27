@@ -4,10 +4,12 @@ $main-grey: #1A1A1A;
 $dark-grey: #282828;
 $light-grey:#E8E8E8;
 $deep-blue: #1D26F2;
-$light-blue: #4FFFEA;
+$light-blue: #00d2b5;
 $green0: #416767;
 $orange: #ff4400;
-$lightorange: #ffca5f;
+$orange: #c58400;
+$green-header: #00d2b5;
+
 
 //BACKGROUND COLORS
 $bg-landing: #F5F5F5;
@@ -34,6 +36,12 @@ $arc-color2: #261e2e;
 }
 .color-white{
     color: $white;
+}
+.color-black{
+        color: #000;
+}
+.color-green-header{
+    color: $green-header;
 }
 
 :export {

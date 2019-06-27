@@ -49,7 +49,7 @@ export default class ContactNews extends React.Component {
                     <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" required />
                   </div>
                   <div className="form-field">
-                    <textarea placeholder="Describe yourself here..."></textarea>
+                    <textarea placeholder="Your message goes here"></textarea>
                   </div>
                     <button type="submit">Send</button>
               </form>

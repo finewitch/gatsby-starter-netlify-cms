@@ -35,13 +35,13 @@
                 margin-right: -15px;
                 li{
                     width:35%;
-                    background: #e89b00;
+                    background: #483046;
                     margin: 10px 0 10px 25px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: flex-start;
-                    box-shadow: #d69003 -30px 0px 30px;
+                    // box-shadow: #d69003 -30px 0px 30px;
                     height:90px;
                     padding:25px;
                     font-family: 'Alegreya';
@@ -82,16 +82,21 @@
                 }
                 input, textarea{
                     font-size:1.7rem;
+                    color:white;
+                    font-family: 'Alegreya';
+                    font-weight: 100;
+                    font-size:1.3rem;
                 }
                 input{
                     border:none;
                     background: transparent;
-                    border-bottom:1px solid orange;
+                    border-bottom:1px solid black;
                     min-height:40px;
                     margin:15px 0;
+                    font-weight: 100;
                 }
                 input::placeholder, textarea::placeholder{
-                    color: $lightorange;
+                    color: #664c64;
                     font-size: 1.3rem;
                     font-family: 'Josefin Sans';
                     font-weight: 100;
@@ -99,7 +104,7 @@
                 textarea{
                     border:none;
                     background: transparent;
-                    border-bottom:1px solid orange;
+                    border-bottom:1px solid black;
                     height:100%;
                     flex-grow: 1;
 
@@ -108,13 +113,14 @@
                 button{
                     font-family: 'Josefin Sans';
                     width:200px;
-                    min-height:70px;
+                    min-height:60px;
                     font-size:1.4rem;
-                    margin-top:20px;
+                    margin-top:30px;
                     background: transparent;
                     border: none;
                     color:$white;
-                    box-shadow: #d69003 -30px 0px 30px;
+                    // box-shadow: #d69003 -30px 0px 30px;
+                    background: #483046;
                     &:hover{
                         cursor: pointer;
                         box-shadow:none;

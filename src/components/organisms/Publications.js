@@ -11,7 +11,7 @@ export default class Publications extends React.Component {
 			<div className="section__wrapper">
 				<div className="publications-title">
 
-				<h3 className="color-grey">publications</h3>
+				<h3 className="color-white">publications</h3>
 
 				<h4>
 					<a>2019 </a>&nbsp;/&nbsp;<a>2020</a>
@@ -294,7 +294,7 @@ SOURCE
 
 				<div className="publications-title title-bottom space-between-removed">
 
-				<h4 className="color-grey"><a>Looking for <span data-hover="resources">resources</span>?</a></h4>
+				<h4 className="color-grey"><a>Looking for <span data-hover="RESOURCES">RESOURCES</span>?</a></h4>
 
 				<h3>
 				<LinkIco/>
