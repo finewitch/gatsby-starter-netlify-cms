@@ -23,13 +23,11 @@
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "^2.9.1",
     "node-sass": "^4.12.0",
-    "p5": "^0.8.0",
     "parcel-bundler": "^1.12.3",
     "prop-types": "^15.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-p5-wrapper": "^1.2.0",
     "uuid": "^3.2.1"
   },
   "keywords": [

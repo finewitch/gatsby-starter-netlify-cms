@@ -107,10 +107,6 @@ export class IndexPageTemplate extends React.Component {
      
           <Menu logoVisibility = {this.state.menuVisible} sectionName={this.state.sectionName} loading={loading}/>
 
-          {/* <div className="canvasContainer">
-            <P5Wrapper sketch={Sketch} isSecondSection = {this.state.scrolled}/>
-          </div> */}
-
           <Landing 
             />
           <Goals
