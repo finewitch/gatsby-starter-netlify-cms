@@ -31,9 +31,7 @@ export class IndexPageTemplate extends React.Component {
 
 
     this.attatchScrollEvent = function (){
-
       var bodyTag = document.querySelector('body');
-
       this.getDomEls(bodyTag);
       
       var rooter = document.querySelector('.root-wrapper');
@@ -180,13 +178,16 @@ export class IndexPageTemplate extends React.Component {
   }
     componentDidMount(){
 
+      var bodyTag = document.querySelector('body');
+      bodyTag.classList.add('body-overflow');
       setTimeout(
         ()=>{
-
-            this.setState({ loading: false })
-
-            
-                  this.attatchScrollEvent();
+          
+          this.setState({ loading: false })
+          
+          
+          this.attatchScrollEvent();
+          bodyTag.classList.remove('body-overflow');
         },2500)
 
         // this.attatchScrollEvent();

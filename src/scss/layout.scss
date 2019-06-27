@@ -20,6 +20,10 @@ body{
     background-color: black;
 }
 
+.body-overflow{
+    overflow:hidden;
+}
+
 .root-wrapper{
        background-color: $bg-landing;
        transition: background-color 700ms;
